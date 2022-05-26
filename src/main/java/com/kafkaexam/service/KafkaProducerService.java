@@ -21,7 +21,7 @@ public class KafkaProducerService {
     public void sendExecuteMessage(Object data) {
         Message<Object> executeMessage = MessageBuilder
                 .withPayload(data)
-                .setHeader(KafkaHeaders.TOPIC, "TOPIC-NEWS")
+                .setHeader(KafkaHeaders.TOPIC, "order")
                 .build();
         kafkaTemplate.send(executeMessage);
     }
