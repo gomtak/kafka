@@ -9,7 +9,8 @@
 ## kafka 토픽 생성
 * .\kafka-topics.bat --create --bootstrap-server localhost:9092 --topic {{토픽이름}}
 ## Kafka 토픽에 메세지 전송
-* .\kafka-console-producer.bat  --broker-list  localhost:9092 --topic order
+* .\kafka-console-producer.bat  --broker-list  localhost:9092 --topic {{토픽이름}}
+* 위 입력 후 아래에서 토픽 입력.
 ## kafka 토픽 확인
 * 시작부터 지금까지 내용 확인.
 * .\kafka-console-consumer.bat --bootstrap-server localhost:9092 --topic {{토픽이름}} --from-beginning
