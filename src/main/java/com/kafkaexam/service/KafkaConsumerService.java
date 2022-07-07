@@ -9,7 +9,7 @@ import org.springframework.stereotype.Service;
 @Service
 public class KafkaConsumerService {
 
-    @KafkaListener(topics = "order", containerFactory = "concurrentKafkaListenerContainerFactory", errorHandler = "kafkaListenerErrorHandler")
+    @KafkaListener(topics = "minting", containerFactory = "concurrentKafkaListenerContainerFactory", errorHandler = "kafkaListenerErrorHandler")
 //    @SendTo("error")
     public void consume(Entity entity) {
         if(entity.getMessage().equals("에러")) throw new KafkaException("에러");

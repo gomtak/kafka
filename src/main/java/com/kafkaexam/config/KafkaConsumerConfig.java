@@ -26,7 +26,7 @@ public class KafkaConsumerConfig {
     public ConsumerFactory<String, Entity> consumerFactory() {
         Map<String, Object> props = new HashMap<>();
         props.put(ConsumerConfig.BOOTSTRAP_SERVERS_CONFIG, BOOTSTRAP_SERVER);
-        props.put(ConsumerConfig.GROUP_ID_CONFIG, "order");
+        props.put(ConsumerConfig.GROUP_ID_CONFIG, "mintingGroup");
         return new DefaultKafkaConsumerFactory<>(
                 props,
                 new StringDeserializer(),

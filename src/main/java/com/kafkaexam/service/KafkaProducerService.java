@@ -21,7 +21,7 @@ public class KafkaProducerService {
     public void sendExecuteMessage(Object data) {
         Message<Object> executeMessage = MessageBuilder
                 .withPayload(data)
-                .setHeader(KafkaHeaders.TOPIC, "order")
+                .setHeader(KafkaHeaders.TOPIC, "minting")
                 .build();
         kafkaTemplate.send(executeMessage);
     }
